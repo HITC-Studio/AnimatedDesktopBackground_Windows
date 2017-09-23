@@ -1,7 +1,0 @@
-L:\Code\AnimatedDesktopBackground\AnimatedBackground\bin\Debug\AnimatedBackground.exe
-L:\Code\AnimatedDesktopBackground\AnimatedBackground\bin\Debug\AnimatedBackground.pdb
-L:\Code\AnimatedDesktopBackground\AnimatedBackground\obj\x86\Debug\AnimatedBackground.Form1.resources
-L:\Code\AnimatedDesktopBackground\AnimatedBackground\obj\x86\Debug\AnimatedBackground.Properties.Resources.resources
-L:\Code\AnimatedDesktopBackground\AnimatedBackground\obj\x86\Debug\AnimatedBackground.csproj.GenerateResource.Cache
-L:\Code\AnimatedDesktopBackground\AnimatedBackground\obj\x86\Debug\AnimatedBackground.exe
-L:\Code\AnimatedDesktopBackground\AnimatedBackground\obj\x86\Debug\AnimatedBackground.pdb

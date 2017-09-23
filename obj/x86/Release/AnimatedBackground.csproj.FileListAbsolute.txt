@@ -1,6 +1,0 @@
-L:\Code\AnimatedDesktopBackground\AnimatedBackground\bin\Release\AnimatedBackground.exe
-L:\Code\AnimatedDesktopBackground\AnimatedBackground\bin\Release\AnimatedBackground.pdb
-L:\Code\AnimatedDesktopBackground\AnimatedBackground\obj\x86\Release\AnimatedBackground.Properties.Resources.resources
-L:\Code\AnimatedDesktopBackground\AnimatedBackground\obj\x86\Release\AnimatedBackground.csproj.GenerateResource.Cache
-L:\Code\AnimatedDesktopBackground\AnimatedBackground\obj\x86\Release\AnimatedBackground.exe
-L:\Code\AnimatedDesktopBackground\AnimatedBackground\obj\x86\Release\AnimatedBackground.pdb
