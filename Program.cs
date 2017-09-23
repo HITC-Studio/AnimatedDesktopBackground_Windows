@@ -41,32 +41,38 @@ namespace AnimatedBackground
             Thread.CurrentThread.IsBackground = true;            
 
             int index = 0;
+            // Grab this index frame
+            Image img = Image.FromFile("Background.gif");
+            FrameDimension dimension = new FrameDimension(img.FrameDimensionsList[0]); //gets the GUID
+            int frameCount = img.GetFrameCount(dimension); //total frames in the animation
 
             // Loop forever
             while (true)
             {
-                // Grab this index frame
-                Image img = Image.FromFile("Background.gif");
-                FrameDimension dimension = new FrameDimension(img.FrameDimensionsList[0]); //gets the GUID
-                int frameCount = img.GetFrameCount(dimension); //total frames in the animation
                 img.SelectActiveFrame(dimension, index);
+
                 // Convert to a bitmap
                 Bitmap frame = (Bitmap)img.Clone();
-
                 // Save this bitmap
                 frame.Save("displayImage.bmp");
+                frame.Dispose();
+                frame = null;
 
                 // Set the background
                 RegistryKey key = Registry.CurrentUser.OpenSubKey(@"Control Panel\Desktop", true);
                 key.SetValue(@"WallpaperStyle", 1.ToString());
                 key.SetValue(@"TileWallpaper", 0.ToString());
+                key.Dispose();
+                key = null;
 
                 string tempPath = Path.Combine(Application.StartupPath, "displayImage.bmp");
                 SystemParametersInfo(SPI_SETDESKWALLPAPER, 0, tempPath, SPIF_UPDATEINIFILE | SPIF_SENDWININICHANGE);
+                tempPath = null;
 
                 // Grab the time duration of this frame
                 PropertyItem item = img.GetPropertyItem(0x5100);
                 int delay = (item.Value[0] + item.Value[1] * 256) * 10;
+                item = null;
 
                 // Sleep for the frame duration
                 Thread.Sleep(delay);
