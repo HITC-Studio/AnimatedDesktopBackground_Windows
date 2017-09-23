@@ -38,10 +38,7 @@ namespace AnimatedBackground
 
         private static void AnimatedBackground()
         {
-            Thread.CurrentThread.IsBackground = true;
-            Image img = Image.FromFile("Background.gif");            
-            FrameDimension dimension = new FrameDimension(img.FrameDimensionsList[0]); //gets the GUID
-            int frameCount = img.GetFrameCount(dimension); //total frames in the animation
+            Thread.CurrentThread.IsBackground = true;            
 
             int index = 0;
 
@@ -49,6 +46,9 @@ namespace AnimatedBackground
             while (true)
             {
                 // Grab this index frame
+                Image img = Image.FromFile("Background.gif");
+                FrameDimension dimension = new FrameDimension(img.FrameDimensionsList[0]); //gets the GUID
+                int frameCount = img.GetFrameCount(dimension); //total frames in the animation
                 img.SelectActiveFrame(dimension, index);
                 // Convert to a bitmap
                 Bitmap frame = (Bitmap)img.Clone();
