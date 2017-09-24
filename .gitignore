@@ -1,3 +1,6 @@
 *.csproj
 *.gif
 *.bmp
+*.manifest
+*.txt
+*.resources
